@@ -1,6 +1,6 @@
-import { Library, Plus, MoveRight } from "lucide-react";
+import { Library, Plus, MoveRight, Pin } from "lucide-react";
 import React from "react";
-import { Links, Types } from "./data";
+import { Links, Playlists, Types } from "./data";
 
 export const SideBar = () => {
     return (
@@ -41,6 +41,25 @@ export const SideBar = () => {
                         >
                             {item.text}
                         </p>
+                    ))}
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    {Playlists.map((item, index) => (
+                        <div className="w-full h-16 p-4 flex justify-start gap-2 items-center cursor-pointer transition duration-300 ease-in-out hover:bg-zinc-800 rounded-lg">
+                            <img
+                                src={item.image}
+                                height={50}
+                                width={50}
+                                className="rounded-md"
+                            />
+                            <p className="flex items-center gap-2 text-xs font-semibold text-zinc-600 ">
+                                {item.pin === true ? (
+                                    <Pin className="text-green-500 text-xs" />
+                                ) : null}
+                                {item.text}
+                            </p>
+                        </div>
                     ))}
                 </div>
             </div>
