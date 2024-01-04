@@ -1,4 +1,4 @@
-import { Library, Plus, MoveRight, Pin } from "lucide-react";
+import { Library, Plus, MoveRight, Pin, Search, Text } from "lucide-react";
 import React from "react";
 import { Links, Playlists, Types } from "./data";
 
@@ -42,6 +42,17 @@ export const SideBar = () => {
                             {item.text}
                         </p>
                     ))}
+                </div>
+
+                <div className="flex justify-between items-center">
+                    <button className="flex items-center justify-center rounded-full p-2 opacity-55 hover:bg-zinc-600">
+                        <Search />
+                    </button>
+
+                    <div className="flex items-center justify-center gap-1 font-semibold text-zinc-700 text-xs cursor-pointer transition hover:text-zinc-300">
+                        <p>Recents</p>
+                        <Text />
+                    </div>
                 </div>
 
                 <div className="flex flex-col gap-2">

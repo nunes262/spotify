@@ -1,9 +1,16 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import React from "react";
-import { SideBar } from "@/components";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { CentralDisplay } from "@/components/CentralDisplay/CentralDisplay";
+import { SideBar, CentralDisplay, Footer } from "@/components";
+import {
+    ChevronLeft,
+    ChevronRight,
+    Play,
+    Repeat,
+    Shuffle,
+    SkipBack,
+    SkipForward,
+} from "lucide-react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -13,7 +20,7 @@ export default function Home() {
                 <SideBar />
                 <CentralDisplay />
             </div>
-            <footer className="bg-zinc-800 border-zinc-700 p-6">footer</footer>
+            <Footer />
         </div>
     );
 }
